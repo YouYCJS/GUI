@@ -38,8 +38,12 @@ def btn_2(): #물품 안내
     btn4.pack(expand=True,fill="y",anchor="w")
 
 def btn_3(): #쇼핑 종료
-    window.destroy()
-
+    messagebox1=messagebox.askquestion("쇼핑을 종료하시겠습니까?","     쇼핑을     \n종료하시겠습니까\n      ??????    ")
+    if messagebox1 =='yes':
+        messagebox.showinfo("쇼핑을 종료합니다.","   이용해주셔서 감사합니다.   \n 안녕히 가십시오~ପ(｡ᵔ ⩊ ᵔ｡)ଓ")
+    else:
+        messagebox.showinfo("쇼핑을 계속합니다.","ପ쇼핑을 계속합니다.ଓ")
+    
 def btn_4(): #식료품 안내
     newWindow4 = tkinter.Toplevel(window)
     newWindow4.title("FOOD")
@@ -179,6 +183,5 @@ btn3=tkinter.Button(window,text="        쇼핑 그만하기!       ",overrelief
 label.pack()
 btn3.pack(side="right",fill="y")
 btn2.pack(expand=True,fill="y",anchor="w")
-label.pack()
 
 window.mainloop()
